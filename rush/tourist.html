@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khon Kaen Tourism - Discovery Piscine Rush</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top px-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success fs-3" href="index.html">
+                <span class="badge bg-warning text-dark me-2">HOME</span>EXPLORE KHON KAEN
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="#hero">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#attractions">สถานที่แนะนำ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trips">ทริปแนะนำ (1 & 2 Days)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">กลับหน้าหลัก</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header Section -->
+    <header id="hero" class="pt-5 mt-5 text-center container">
+        <div class="py-4 rounded-4 hero-banner text-white shadow-sm my-3">
+            <h1 class="display-4 fw-bold">DISCOVER KHON KAEN</h1>
+            <p class="lead fw-normal fs-4">สัมผัสเสน่ห์ขอนแก่น มนต์เสน่ห์อีสาน คาเฟ่ ธรรมชาติ และสตรีทฟู้ด</p>
+            <button id="randomBtn" class="btn btn-warning btn-lg fw-bold rounded-pill px-4 shadow">
+                🎲 สุ่มที่เที่ยวประจำวัน!
+            </button>
+        </div>
+    </header>
+
+    <!-- Attractions Grid Section -->
+    <section id="attractions" class="container py-4">
+        <h2 class="text-center fw-bold mb-3">ไฮไลต์สถานที่ท่องเที่ยว</h2>
+        <div class="d-flex justify-content-center gap-2 mb-4 flex-wrap" id="filter-buttons">
+            <button class="btn btn-dark active rounded-pill px-3 filter-btn" data-filter="all">ทั้งหมด</button>
+            <button class="btn btn-outline-dark rounded-pill px-3 filter-btn" data-filter="culture">วัฒนธรรม/วัด</button>
+            <button class="btn btn-outline-dark rounded-pill px-3 filter-btn" data-filter="nature">ธรรมชาติ</button>
+            <button class="btn btn-outline-dark rounded-pill px-3 filter-btn" data-filter="food">อาหาร/ถนนคนเดิน</button>
+        </div>
+
+        <div class="row g-3" id="gallery-grid">
+            <div class="col-md-6 col-lg-4 gallery-item" data-category="culture">
+                <div class="bento-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80" class="card-img-top bento-img" alt="วัดพระธาตุขามแก่น">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end bento-overlay">
+                        <span class="badge bg-warning text-dark w-auto mb-1 align-self-start">Culture</span>
+                        <h4 class="text-white fw-bold mb-0">วัดพระธาตุขามแก่น</h4>
+                        <p class="text-white-50 small mb-0">ปูชนียสถานคู่บ้านคู่เมืองขอนแก่น</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 gallery-item" data-category="nature">
+                <div class="bento-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" class="card-img-top bento-img" alt="อุทยานแห่งชาติภูเวียง">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end bento-overlay">
+                        <span class="badge bg-info text-dark w-auto mb-1 align-self-start">Nature</span>
+                        <h4 class="text-white fw-bold mb-0">อุทยานแห่งชาติภูเวียง</h4>
+                        <p class="text-white-50 small mb-0">กำเนิดฟอสซิลไดโนเสาร์อีสาน</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 gallery-item" data-category="food">
+                <div class="bento-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" class="card-img-top bento-img" alt="ถนนคนเดินขอนแก่น">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end bento-overlay">
+                        <span class="badge bg-danger w-auto mb-1 align-self-start">Food & Street</span>
+                        <h4 class="text-white fw-bold mb-0">ตลาดต้นตาน & สตรีทฟู้ด</h4>
+                        <p class="text-white-50 small mb-0">แหล่งรวมอาหารแซ่บ ช็อป ชิล ยามค่ำคืน</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6 gallery-item" data-category="nature">
+                <div class="bento-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" class="card-img-top bento-img" alt="บึงแก่นนคร">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end bento-overlay">
+                        <span class="badge bg-info text-dark w-auto mb-1 align-self-start">Nature & Chill</span>
+                        <h4 class="text-white fw-bold mb-0">บึงแก่นนคร</h4>
+                        <p class="text-white-50 small mb-0">แลนด์มาร์กพักผ่อนกลางเมือง ออกกำลังกาย ชมวิวพระอาทิตย์ตก</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6 gallery-item" data-category="food">
+                <div class="bento-card card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" class="card-img-top bento-img" alt="อาหารอีสานต้นตำรับ">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end bento-overlay">
+                        <span class="badge bg-danger w-auto mb-1 align-self-start">Food</span>
+                        <h4 class="text-white fw-bold mb-0">ขอนแก่น อีสานแซ่บนัว</h4>
+                        <p class="text-white-50 small mb-0">ส้มตำ ส้มตำถาด ไก่ย่างเขาสวนกวาง และหมูกระทะขอนแก่น</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trip Plans Section -->
+    <section id="trips" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">🗺️ แพลนเที่ยวขอนแก่นจัดเต็ม (Trip Plans)</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 p-4 border-start border-4 border-success">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="fw-bold text-success mb-0">⚡ 1-Day Express Trip</h3>
+                            <span class="badge bg-success-subtle text-success border border-success px-3 py-2 rounded-pill">สายคาเฟ่ & ชิลในเมือง</span>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent"><strong>09:00 น.</strong> - ไหว้พระไหว้เจ้าแม่กวนอิมเสริมสิริมงคลที่ <em>วัดหนองแวง พระมหาธาตุแก่นนคร</em></li>
+                            <li class="list-group-item bg-transparent"><strong>12:00 น.</strong> - ลิ้มลองรสชาติส้มตำถาดและไก่ย่างเขาสวนกวาง ร้านดังขอนแก่น</li>
+                            <li class="list-group-item bg-transparent"><strong>14:30 น.</strong> - Hop คาเฟ่สไตล์ Modern Minimal ยอดฮิตโซนมหาวิทยาลัยขอนแก่น</li>
+                            <li class="list-group-item bg-transparent"><strong>18:00 น.</strong> - เดินช็อปชิมชิลที่ <em>ตลาดต้นตาน</em> หรือ <em>ถนนคนเดินขอนแก่น</em></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 p-4 border-start border-4 border-warning">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="fw-bold text-warning mb-0">🌿 2-Days & 1-Night Trip</h3>
+                            <span class="badge bg-warning-subtle text-warning border border-warning px-3 py-2 rounded-pill">สายธรรมชาติ & ธรรมะ</span>
+                        </div>
+                        <p class="fw-bold text-muted mb-2">Day 1: ตะลุยธรรมชาติ & ธรรมชาติภูเวียง</p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item bg-transparent">เช้า: ออกเดินทางไปอุทยานแห่งชาติภูเวียง ชมพิพิธภัณฑ์ไดโนเสาร์</li>
+                            <li class="list-group-item bg-transparent">เย็น: ชมวิวพระอาทิตย์ตกดินเหนือเขื่อนอุบลรัตน์</li>
+                        </ul>
+                        <p class="fw-bold text-muted mb-2">Day 2: วัฒนธรรมเมือง & ตลาดค่ำคืน</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent">เช้า: สักการะพระธาตุขามแก่น อ.น้ำพอง</li>
+                            <li class="list-group-item bg-transparent">บ่าย: แวะซื้อของฝากผ้าไหมแพรวาขอนแก่น และหมูยอขอนแก่น</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">Created by <strong>kmeekun</strong> & <strong>rruangsa</strong> | Discovery Piscine Rush Project</p>
+    </footer>
+
+    <!-- Modal Popup for Random Spot -->
+    <div class="modal fade" id="randomModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-0 bg-warning text-dark">
+                    <h5 class="modal-title fw-bold">🎉 จุดหมายท่องเที่ยวของคุณวันนี้!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <h3 id="spotTitle" class="fw-bold text-primary mb-2"></h3>
+                    <p id="spotDesc" class="text-muted"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
